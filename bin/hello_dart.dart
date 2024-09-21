@@ -63,4 +63,10 @@ void main(List<String> arguments) {
   print(hello_dart.joinWithCommas(1, 2, 3, 4));
   print(hello_dart.joinWithCommas(1, 2, 3, 4, 5));
   print('---------------------------------');
+
+  print('constructor');
+  print('---------------------------------');
+  hello_dart.MyClassV2(anInt: 0, aString: 'lorem ipsum', aDouble: 42.0);
+  hello_dart.MyClassV3(0, 'lorem ipsum', 42.0);
+  print('---------------------------------');
 }

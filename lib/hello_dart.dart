@@ -87,3 +87,19 @@ class MyDataObject {
     );
   }
 }
+
+class MyClassV2 {
+  final int anInt;
+  final String aString;
+  final double aDouble;
+  
+  MyClassV2({required this.anInt, required this.aString,required this.aDouble});
+}
+
+class MyClassV3 {
+  final int anInt;
+  final String aString;
+  final double aDouble;
+  
+  MyClassV3(this.anInt, this.aString,this.aDouble);
+}
