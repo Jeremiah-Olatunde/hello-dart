@@ -53,6 +53,14 @@ void main(List<String> arguments) {
   } catch(error) {
     print('unknown error');
   }
-  
+  print('---------------------------------');
+
+  print('optional params');
+  print('---------------------------------');
+  print(hello_dart.joinWithCommas(1));
+  print(hello_dart.joinWithCommas(1, 2));
+  print(hello_dart.joinWithCommas(1, 2, 3));
+  print(hello_dart.joinWithCommas(1, 2, 3, 4));
+  print(hello_dart.joinWithCommas(1, 2, 3, 4, 5));
   print('---------------------------------');
 }

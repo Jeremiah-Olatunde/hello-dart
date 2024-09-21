@@ -52,3 +52,13 @@ class ShoppingCart {
     return 'items([$joined])';
   }
 }
+
+String joinWithCommas(int u, [int? v, int? w, int? x, int? y, int? z]){
+  String result = '$u';
+  if(v != null) result += ',$v';
+  if(w != null) result += ',$w';
+  if(x != null) result += ',$x';
+  if(y != null) result += ',$y';
+  if(z != null) result += ',$z';
+  return result;
+}
