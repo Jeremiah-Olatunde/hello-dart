@@ -69,4 +69,11 @@ void main(List<String> arguments) {
   hello_dart.MyClassV2(anInt: 0, aString: 'lorem ipsum', aDouble: 42.0);
   hello_dart.MyClassV3(0, 'lorem ipsum', 42.0);
   print('---------------------------------');
+
+  print('constructor initializer');
+  print('---------------------------------');
+  hello_dart.FirstTwoLetters ftl = hello_dart.FirstTwoLetters('he');
+  print(ftl.letterOne);
+  print(ftl.letterTwo);
+  print('---------------------------------');
 }

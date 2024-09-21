@@ -93,7 +93,7 @@ class MyClassV2 {
   final String aString;
   final double aDouble;
   
-  MyClassV2({required this.anInt, required this.aString,required this.aDouble});
+  MyClassV2({required this.anInt, required this.aString, required this.aDouble});
 }
 
 class MyClassV3 {
@@ -102,4 +102,17 @@ class MyClassV3 {
   final double aDouble;
   
   MyClassV3(this.anInt, this.aString,this.aDouble);
+}
+
+class FirstTwoLetters {
+  final String letterOne;
+  final String letterTwo;
+
+  FirstTwoLetters(String word)
+    : 
+      assert(1 < word.length),
+      letterOne = word[0], 
+      letterTwo = word[1]
+    ;
+
 }
