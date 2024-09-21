@@ -37,4 +37,22 @@ void main(List<String> arguments) {
   print(x.counter);
   print('---------------------------------');
 
+
+  print('');
+  print('accessors');
+  print('---------------------------------');
+  final hello_dart.ShoppingCart cart = hello_dart.ShoppingCart('₦');
+  cart.prices = [0, 1, 2, 3, 4];
+
+  print(cart.display());
+
+  try {
+    cart.prices = [0, 1, -1, 2, 3];
+  } on hello_dart.InvalidPriceException {
+    print('invalid price detected');
+  } catch(error) {
+    print('unknown error');
+  }
+  
+  print('---------------------------------');
 }

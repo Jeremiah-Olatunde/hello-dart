@@ -24,3 +24,31 @@ class MyClass {
   void lorem(){ print('lorem'); }
   void ipsum(){ print('ipsum'); }
 }
+
+class InvalidPriceException {}
+
+class ShoppingCart {
+  String currency;
+  List<double> _prices = [];
+
+  ShoppingCart(this.currency);
+  
+  // TODO: Add a "total" getter here:
+  double get total {
+    return _prices.reduce((a, b) => a + b);
+  }
+
+  // TODO: Add a "prices" setter here:
+  set prices(List<double> value){
+    if(value.any((x) => x < 0)) {
+      throw InvalidPriceException();
+    }
+
+    _prices = value;
+  }
+
+  String display(){
+    String joined = _prices.fold("", (p, v) => '$p, $currency$v');
+    return 'items([$joined])';
+  }
+}
