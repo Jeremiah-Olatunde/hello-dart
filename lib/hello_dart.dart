@@ -144,9 +144,9 @@ class Color {
         green = 0,
         blue = 0;
 
-  Color.red(): this(255, 0, 0);
-  Color.green(): this(0, 255, 0);
-  Color.blue(): this(0, 0, 255);
+  Color.red() : this(255, 0, 0);
+  Color.green() : this(0, 255, 0);
+  Color.blue() : this(0, 0, 255);
 
   @override
   String toString() {
@@ -187,4 +187,12 @@ class IntegerTriple extends IntegerHolder {
   final int c;
 
   IntegerTriple(this.a, this.b, this.c);
+}
+
+class Recipe {
+  final List<String> ingredients;
+  final int calories;
+  final double milligramsOfSodium;
+
+  const Recipe(this.ingredients, this.calories, this.milligramsOfSodium);
 }
