@@ -24,5 +24,3 @@ class MyClass {
   void lorem(){ print('lorem'); }
   void ipsum(){ print('ipsum'); }
 }
-
-void main(){}
