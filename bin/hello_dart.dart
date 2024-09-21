@@ -108,4 +108,17 @@ void main(List<String> arguments) {
   print(hello_dart.Color.green());
   print(hello_dart.Color.blue());
   print('---------------------------------');
+
+
+  print('');
+  print('records');
+  print('---------------------------------');
+  (int x, int y, int z) point = (0, 1, 2);
+  ({int x, int y, int z}) namedPoint = (z: 2, x: 0, y: 1);
+  ({int x, int y, int z}) namedPoint2 = (x: 0, y: 1, z: 2);
+  print(point);
+  print(namedPoint);
+  print(point == namedPoint);
+  print(namedPoint2 == namedPoint);
+  print('---------------------------------');
 }
