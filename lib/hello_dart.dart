@@ -149,3 +149,38 @@ class Color {
     return 'rgb($red, $green, $blue)';
   }
 }
+
+class IntegerHolder {
+  IntegerHolder();
+
+  // Implement this factory constructor.
+  factory IntegerHolder.fromList(List<int> list) {
+    return switch (list) {
+      [int a] => IntegerSingle(a),
+      [int a, int b] => IntegerDouble(a, b),
+      [int a, int b, int c] => IntegerTriple(a, b, c),
+      _ => throw Error()
+    };
+  }
+}
+
+class IntegerSingle extends IntegerHolder {
+  final int a;
+
+  IntegerSingle(this.a);
+}
+
+class IntegerDouble extends IntegerHolder {
+  final int a;
+  final int b;
+
+  IntegerDouble(this.a, this.b);
+}
+
+class IntegerTriple extends IntegerHolder {
+  final int a;
+  final int b;
+  final int c;
+
+  IntegerTriple(this.a, this.b, this.c);
+}
