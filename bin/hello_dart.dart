@@ -18,4 +18,12 @@ void main(List<String> arguments) {
     print('fibonacci($i) -> ${hello_dart.fibonacci(i)}');
   }
   print('---------------------------------');  
+
+  print('');
+  print('identity');
+  print('---------------------------------');
+  print('identity(1) -> ${hello_dart.identity(1)}');
+  print('identity("hello dart") -> ${hello_dart.identity('hello dart')}');
+  print('identity([0, 1, 2, 3]) -> ${hello_dart.identity([0, 1, 2, 3])}');
+  print('---------------------------------');  
 }
