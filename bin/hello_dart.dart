@@ -10,5 +10,12 @@ void main(List<String> arguments) {
     print('factorial($i) -> ${hello_dart.factorial(i)}');
   }
   print('---------------------------------');
-  
+
+  print('');
+  print('fibonacci numbers');
+  print('---------------------------------');
+  for(int i = 0; i < 10; i++){
+    print('fibonacci($i) -> ${hello_dart.fibonacci(i)}');
+  }
+  print('---------------------------------');  
 }
