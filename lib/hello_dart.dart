@@ -1,3 +1,4 @@
+
 int calculate() {
   return 6 * 7;
 }
@@ -14,3 +15,14 @@ int fibonacci(int n){
 T identity<T>(T x){
   return x;
 }
+
+class MyClass {
+  int counter = 0;
+
+  void hello(){ print('hello'); }
+  void world(){ print('world'); }
+  void lorem(){ print('lorem'); }
+  void ipsum(){ print('ipsum'); }
+}
+
+void main(){}

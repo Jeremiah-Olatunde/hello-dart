@@ -26,4 +26,15 @@ void main(List<String> arguments) {
   print('identity("hello dart") -> ${hello_dart.identity('hello dart')}');
   print('identity([0, 1, 2, 3]) -> ${hello_dart.identity([0, 1, 2, 3])}');
   print('---------------------------------');  
+
+
+  print('cascading');
+  print('---------------------------------');
+  hello_dart.MyClass x = hello_dart.MyClass();
+  x..hello()..world()..lorem()..ipsum();
+
+  print(x..counter += 2..counter += 3);
+  print(x.counter);
+  print('---------------------------------');
+
 }
