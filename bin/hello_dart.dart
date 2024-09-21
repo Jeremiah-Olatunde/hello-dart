@@ -6,7 +6,7 @@ void main(List<String> arguments) {
   print('');
   print('factorials');
   print('---------------------------------');
-  for(int i = 0; i < 10; i++){
+  for (int i = 0; i < 10; i++) {
     print('factorial($i) -> ${hello_dart.factorial(i)}');
   }
   print('---------------------------------');
@@ -14,10 +14,10 @@ void main(List<String> arguments) {
   print('');
   print('fibonacci numbers');
   print('---------------------------------');
-  for(int i = 0; i < 10; i++){
+  for (int i = 0; i < 10; i++) {
     print('fibonacci($i) -> ${hello_dart.fibonacci(i)}');
   }
-  print('---------------------------------');  
+  print('---------------------------------');
 
   print('');
   print('identity');
@@ -25,18 +25,22 @@ void main(List<String> arguments) {
   print('identity(1) -> ${hello_dart.identity(1)}');
   print('identity("hello dart") -> ${hello_dart.identity('hello dart')}');
   print('identity([0, 1, 2, 3]) -> ${hello_dart.identity([0, 1, 2, 3])}');
-  print('---------------------------------');  
-
+  print('---------------------------------');
 
   print('cascading');
   print('---------------------------------');
   hello_dart.MyClass x = hello_dart.MyClass();
-  x..hello()..world()..lorem()..ipsum();
+  x
+    ..hello()
+    ..world()
+    ..lorem()
+    ..ipsum();
 
-  print(x..counter += 2..counter += 3);
+  print(x
+    ..counter += 2
+    ..counter += 3);
   print(x.counter);
   print('---------------------------------');
-
 
   print('');
   print('accessors');
@@ -50,7 +54,7 @@ void main(List<String> arguments) {
     cart.prices = [0, 1, -1, 2, 3];
   } on hello_dart.InvalidPriceException {
     print('invalid price detected');
-  } catch(error) {
+  } catch (error) {
     print('unknown error');
   }
   print('---------------------------------');

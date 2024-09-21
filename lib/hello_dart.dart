@@ -1,28 +1,38 @@
-
 int calculate() {
   return 6 * 7;
 }
 
-int factorial(int n){
+int factorial(int n) {
   return n == 0 ? 1 : n * factorial(n - 1);
 }
 
-int fibonacci(int n){
-  if(n == 0 || n == 1) return n;
+int fibonacci(int n) {
+  if (n == 0 || n == 1) return n;
   return fibonacci(n - 1) + fibonacci(n - 2);
 }
 
-T identity<T>(T x){
+T identity<T>(T x) {
   return x;
 }
 
 class MyClass {
   int counter = 0;
 
-  void hello(){ print('hello'); }
-  void world(){ print('world'); }
-  void lorem(){ print('lorem'); }
-  void ipsum(){ print('ipsum'); }
+  void hello() {
+    print('hello');
+  }
+
+  void world() {
+    print('world');
+  }
+
+  void lorem() {
+    print('lorem');
+  }
+
+  void ipsum() {
+    print('ipsum');
+  }
 }
 
 class InvalidPriceException {}
@@ -32,37 +42,36 @@ class ShoppingCart {
   List<double> _prices = [];
 
   ShoppingCart(this.currency);
-  
+
   // TODO: Add a "total" getter here:
   double get total {
     return _prices.reduce((a, b) => a + b);
   }
 
   // TODO: Add a "prices" setter here:
-  set prices(List<double> value){
-    if(value.any((x) => x < 0)) {
+  set prices(List<double> value) {
+    if (value.any((x) => x < 0)) {
       throw InvalidPriceException();
     }
 
     _prices = value;
   }
 
-  String display(){
+  String display() {
     String joined = _prices.fold("", (p, v) => '$p, $currency$v');
     return 'items([$joined])';
   }
 }
 
-String joinWithCommas(int u, [int? v, int? w, int? x, int? y, int? z]){
+String joinWithCommas(int u, [int? v, int? w, int? x, int? y, int? z]) {
   String result = '$u';
-  if(v != null) result += ',$v';
-  if(w != null) result += ',$w';
-  if(x != null) result += ',$x';
-  if(y != null) result += ',$y';
-  if(z != null) result += ',$z';
+  if (v != null) result += ',$v';
+  if (w != null) result += ',$w';
+  if (x != null) result += ',$x';
+  if (y != null) result += ',$y';
+  if (z != null) result += ',$z';
   return result;
 }
-
 
 class MyDataObject {
   final int anInt;
@@ -70,20 +79,16 @@ class MyDataObject {
   final double aDouble;
 
   MyDataObject({
-     this.anInt = 1,
-     this.aString = 'Old!',
-     this.aDouble = 2.0,
+    this.anInt = 1,
+    this.aString = 'Old!',
+    this.aDouble = 2.0,
   });
 
-  MyDataObject copyWith({
-    int? newInt,
-    String? newString,
-    double? newDouble
-  }){
+  MyDataObject copyWith({int? newInt, String? newString, double? newDouble}) {
     return MyDataObject(
-      anInt: newInt ?? anInt, 
-      aString: newString ?? aString, 
-      aDouble: newDouble ?? aDouble, 
+      anInt: newInt ?? anInt,
+      aString: newString ?? aString,
+      aDouble: newDouble ?? aDouble,
     );
   }
 }
@@ -92,16 +97,17 @@ class MyClassV2 {
   final int anInt;
   final String aString;
   final double aDouble;
-  
-  MyClassV2({required this.anInt, required this.aString, required this.aDouble});
+
+  MyClassV2(
+      {required this.anInt, required this.aString, required this.aDouble});
 }
 
 class MyClassV3 {
   final int anInt;
   final String aString;
   final double aDouble;
-  
-  MyClassV3(this.anInt, this.aString,this.aDouble);
+
+  MyClassV3(this.anInt, this.aString, this.aDouble);
 }
 
 class FirstTwoLetters {
@@ -109,10 +115,7 @@ class FirstTwoLetters {
   final String letterTwo;
 
   FirstTwoLetters(String word)
-    : 
-      assert(1 < word.length),
-      letterOne = word[0], 
-      letterTwo = word[1]
-    ;
-
+      : assert(1 < word.length),
+        letterOne = word[0],
+        letterTwo = word[1];
 }
