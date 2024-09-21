@@ -120,28 +120,32 @@ class FirstTwoLetters {
         letterTwo = word[1];
 }
 
-
 class Point3D {
   final int x, y, z;
 
-  Point3D({ required this.x, required this.y, required this.z });
-  Point3D.orgin(): x = 0, y = 0, z = 0;
+  Point3D({required this.x, required this.y, required this.z});
+  Point3D.orgin()
+      : x = 0,
+        y = 0,
+        z = 0;
 
   @override
-    String toString() {
-      return 'Point($x, $y, $z)';
-    }
+  String toString() {
+    return 'Point($x, $y, $z)';
+  }
 }
-
 
 class Color {
   int red, green, blue;
-  
+
   Color(this.red, this.green, this.blue);
-  Color.black(): red = 0, green = 0, blue = 0;
+  Color.black()
+      : red = 0,
+        green = 0,
+        blue = 0;
 
   @override
-    String toString() {
-      return 'rgb($red, $green, $blue)';
-    }
+  String toString() {
+    return 'rgb($red, $green, $blue)';
+  }
 }

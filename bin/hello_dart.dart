@@ -27,6 +27,7 @@ void main(List<String> arguments) {
   print('identity([0, 1, 2, 3]) -> ${hello_dart.identity([0, 1, 2, 3])}');
   print('---------------------------------');
 
+  print('');
   print('cascading');
   print('---------------------------------');
   hello_dart.MyClass x = hello_dart.MyClass();
@@ -59,6 +60,7 @@ void main(List<String> arguments) {
   }
   print('---------------------------------');
 
+  print('');
   print('optional params');
   print('---------------------------------');
   print(hello_dart.joinWithCommas(1));
@@ -68,12 +70,14 @@ void main(List<String> arguments) {
   print(hello_dart.joinWithCommas(1, 2, 3, 4, 5));
   print('---------------------------------');
 
+  print('');
   print('constructor');
   print('---------------------------------');
   hello_dart.MyClassV2(anInt: 0, aString: 'lorem ipsum', aDouble: 42.0);
   hello_dart.MyClassV3(0, 'lorem ipsum', 42.0);
   print('---------------------------------');
 
+  print('');
   print('constructor initializer');
   print('---------------------------------');
   hello_dart.FirstTwoLetters ftl = hello_dart.FirstTwoLetters('he');
@@ -81,6 +85,7 @@ void main(List<String> arguments) {
   print(ftl.letterTwo);
   print('---------------------------------');
 
+  print('');
   print('named constructors');
   print('---------------------------------');
   hello_dart.Point3D unitShpere = hello_dart.Point3D(x: 1, y: 1, z: 1);
@@ -90,9 +95,9 @@ void main(List<String> arguments) {
 
   print('');
 
-  hello_dart.Color red = hello_dart.Color(255, 1,  1);
+  hello_dart.Color red = hello_dart.Color(255, 1, 1);
   hello_dart.Color black = hello_dart.Color.black();
   print(red);
-  print(black);  
+  print(black);
   print('---------------------------------');
 }
