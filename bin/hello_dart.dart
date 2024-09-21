@@ -100,4 +100,12 @@ void main(List<String> arguments) {
   print(red);
   print(black);
   print('---------------------------------');
+
+  print('');
+  print('redirecting constructors');
+  print('---------------------------------');
+  print(hello_dart.Color.red());
+  print(hello_dart.Color.green());
+  print(hello_dart.Color.blue());
+  print('---------------------------------');
 }
