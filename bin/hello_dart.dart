@@ -7,7 +7,7 @@ void main(List<String> arguments) {
   print('factorials');
   print('---------------------------------');
   for(int i = 0; i < 10; i++){
-    print('facotrial($i) -> ${hello_dart.factorial(i)}');
+    print('factorial($i) -> ${hello_dart.factorial(i)}');
   }
   print('---------------------------------');
   
