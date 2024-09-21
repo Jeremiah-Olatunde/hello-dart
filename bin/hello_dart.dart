@@ -80,4 +80,19 @@ void main(List<String> arguments) {
   print(ftl.letterOne);
   print(ftl.letterTwo);
   print('---------------------------------');
+
+  print('named constructors');
+  print('---------------------------------');
+  hello_dart.Point3D unitShpere = hello_dart.Point3D(x: 1, y: 1, z: 1);
+  hello_dart.Point3D origin = hello_dart.Point3D.orgin();
+  print(unitShpere);
+  print(origin);
+
+  print('');
+
+  hello_dart.Color red = hello_dart.Color(255, 1,  1);
+  hello_dart.Color black = hello_dart.Color.black();
+  print(red);
+  print(black);  
+  print('---------------------------------');
 }
