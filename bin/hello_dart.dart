@@ -151,4 +151,20 @@ void main(List<String> arguments) {
 
   print(processed);
   print('---------------------------------');
+
+
+  print('');
+  print('---------------------------------');
+  var b = [0].map((a) => multiples(a, 1));
+  print(b);
+  print(b.expand((x) => x));
+  print(b.expand((x) => x).toSet());
+  var r = b.expand((x) => x).toSet().fold(0, (p, v) => p + v);
+  print(r);
+  print('---------------------------------');
+}
+
+List<int> multiples(int n, int max) {
+  if(n == 0) return [];
+  return [for (int i = n; i < max; i += n) i];
 }
