@@ -109,7 +109,6 @@ void main(List<String> arguments) {
   print(hello_dart.Color.blue());
   print('---------------------------------');
 
-
   print('');
   print('records');
   print('---------------------------------');
@@ -122,20 +121,34 @@ void main(List<String> arguments) {
   print(namedPoint2 == namedPoint);
   print('---------------------------------');
 
-
-
   print('');
   print('records');
   print('---------------------------------');
-  print([for(int i = 0; i < 20; i+= 2) i]);
-  print([for(int i = 0; i < 20; i++) if(i % 2 == 0) i]);
+  print([for (int i = 0; i < 20; i += 2) i]);
+  print([
+    for (int i = 0; i < 20; i++)
+      if (i % 2 == 0) i
+  ]);
   print('---------------------------------');
-
 
   print('');
   print('toRadixString');
   print('---------------------------------');
-  int numberOf1InBinary = 89.toRadixString(2).split('').fold(0, (p, v) => p + (v == '1' ? 1 : 0));
+  int numberOf1InBinary =
+      89.toRadixString(2).split('').fold(0, (p, v) => p + (v == '1' ? 1 : 0));
   print(numberOf1InBinary);
+  print('---------------------------------');
+
+  print('');
+  print('regex');
+  print('---------------------------------');
+  String target = 
+      '"That\'s the password: \'PASSWORD 123\'!", cried the Special Agent.\nSo I fled.';
+
+  RegExp regex = RegExp(r"\w+('\w)*");
+  Iterable<RegExpMatch> matches = regex.allMatches(target.toLowerCase());
+  List<String> processed = matches.map((match) => match.group(0)!).toList();
+
+  print(processed);
   print('---------------------------------');
 }
