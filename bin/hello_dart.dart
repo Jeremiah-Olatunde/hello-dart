@@ -121,4 +121,13 @@ void main(List<String> arguments) {
   print(point == namedPoint);
   print(namedPoint2 == namedPoint);
   print('---------------------------------');
+
+
+
+  print('');
+  print('records');
+  print('---------------------------------');
+  print([for(int i = 0; i < 20; i+= 2) i]);
+  print([for(int i = 0; i < 20; i++) if(i % 2 == 0) i]);
+  print('---------------------------------');
 }
