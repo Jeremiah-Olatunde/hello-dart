@@ -130,4 +130,12 @@ void main(List<String> arguments) {
   print([for(int i = 0; i < 20; i+= 2) i]);
   print([for(int i = 0; i < 20; i++) if(i % 2 == 0) i]);
   print('---------------------------------');
+
+
+  print('');
+  print('toRadixString');
+  print('---------------------------------');
+  int numberOf1InBinary = 89.toRadixString(2).split('').fold(0, (p, v) => p + (v == '1' ? 1 : 0));
+  print(numberOf1InBinary);
+  print('---------------------------------');
 }
