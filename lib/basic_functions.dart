@@ -49,3 +49,7 @@ Iterable<String> toWords(String sentence) sync* {
 	  yield word;
 	}
 }
+
+R Function(U, T) swap<T, U, R>(R Function(T, U) f){
+	return (u, t) => f(t, u);
+}
