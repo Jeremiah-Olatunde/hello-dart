@@ -56,10 +56,13 @@ R Function(U, T) swap<T, U, R>(R Function(T, U) f){
 
 List<T> buildList<T>(int size, T Function(int) f, { bool Function(T, int) ? skip }){
 	List<T> list = [];
+	skip ??= (_, __) => false;
+
 
 	for(int i = 0; i < size; i++){
 		T mapped = f(i);
-		if(skip != null && skip(mapped, i)) list.add(mapped);
+		if(skip(mapped, i)) continue;
+		list.add(mapped);
 	}
 
 	return list;
