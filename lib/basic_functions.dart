@@ -13,3 +13,8 @@ int mul(int multiplicand, int multiplier){
 int div(int dividend, int divisor){
 	return dividend ~/ divisor;
 }
+
+int factorial(int n){
+	if(n == 0) return 1;
+	return n * factorial(n - 1);
+}
