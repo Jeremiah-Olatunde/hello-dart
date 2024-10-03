@@ -35,3 +35,11 @@ int max(int a, int b){
 (int min, int max) orderedPair(int m, int n){
 	return m < n ? (m, n) : (n, m);
 }
+
+int gcd(int a, int b){
+	if(a == 0) return b;
+	if(b == 0) return a;
+
+	var (min, max) = orderedPair(a, b);
+	return gcd(min, max % min);
+}
