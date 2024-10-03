@@ -39,3 +39,7 @@ int gcd(int a, int b){
 	var (min, max) = orderedPair(a, b);
 	return gcd(min, max % min);
 }
+
+List<int> buildSequence({ required int to, int? from}){
+	return [ for(int i = from ?? 0; i < to; i++) i];
+}
