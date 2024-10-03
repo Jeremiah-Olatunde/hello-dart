@@ -43,3 +43,9 @@ int gcd(int a, int b){
 List<int> buildSequence({ required int to, int? from}){
 	return [ for(int i = from ?? 0; i < to; i++) i];
 }
+
+Iterable<String> toWords(String sentence) sync* {
+	for(String word in sentence.split(" ")) {
+	  yield word;
+	}
+}
