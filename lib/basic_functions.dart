@@ -53,3 +53,14 @@ Iterable<String> toWords(String sentence) sync* {
 R Function(U, T) swap<T, U, R>(R Function(T, U) f){
 	return (u, t) => f(t, u);
 }
+
+List<T> buildList<T>(int size, T Function(int) f, { bool Function(T, int) ? skip }){
+	List<T> list = [];
+
+	for(int i = 0; i < size; i++){
+		T mapped = f(i);
+		if(skip != null && skip(mapped, i)) list.add(mapped);
+	}
+
+	return list;
+}
