@@ -54,7 +54,7 @@ R Function(U, T) swap<T, U, R>(R Function(T, U) f){
 	return (u, t) => f(t, u);
 }
 
-List<T> buildList<T>(int size, T Function(int) f, { bool Function(T, int) ? skip }){
+List<T> buildList<T>(int size, T Function(int) f, { bool Function(T, int)? skip }){
 	List<T> list = [];
 	skip ??= (_, __) => false;
 
@@ -66,4 +66,9 @@ List<T> buildList<T>(int size, T Function(int) f, { bool Function(T, int) ? skip
 	}
 
 	return list;
+}
+
+List<T> buildListV2<T>(int size, T Function(int) f, { bool Function(T, int) ? skip }){
+	skip ??= (_, __) => false;
+	return [ for(int i = 0; i < size; i++) if(!skip(f(i), i)) f(i)];
 }
