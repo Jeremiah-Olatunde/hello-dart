@@ -24,13 +24,9 @@ int fibonnaci(int n){
 	return fibonnaci(n - 1) + fibonnaci(n - 2);
 }
 
-int min(int a, int b){
-	return a < b ? a : b;
-}
+int min(int a, int b) => a < b ? a : b;
 
-int max(int a, int b){
-	return b < a ? a : b;
-}
+int max(int a, int b) => b < a ? a : b;
 
 (int min, int max) orderedPair(int m, int n){
 	return m < n ? (m, n) : (n, m);
