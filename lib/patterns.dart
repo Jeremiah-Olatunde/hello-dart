@@ -109,3 +109,10 @@ Option<int> safeDiv(int dividend, int divisor){
     _ => Some(dividend ~/ divisor),
   };
 }
+
+Option<T> safeHead<T>(List<T> xs){
+  return switch(xs){
+    [] => None(),
+    [T head, ..._] => Some(head),
+  };
+}
