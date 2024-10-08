@@ -14,3 +14,8 @@ T headV2<T>(List<T> xs) {
     [T head, ...List<T> _] => head
   };
 }
+
+(U, T) swap<T, U>((T, U) pair) {
+  var (T t, U u) = pair;
+  return (u, t);
+}
