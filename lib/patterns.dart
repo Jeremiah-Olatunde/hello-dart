@@ -1,3 +1,6 @@
+
+import 'dart:math';
+
 class EmptyListError {}
 
 T head<T>(List<T> xs) {
@@ -72,5 +75,26 @@ String describePointLocation(Point3D point){
     (x: double x, y: double y, z: double z) when x < 1 && y < 1 && z < 1  => "within unit sphere",
 
     _ => "somewhere in 3 dimensional space"
+  };
+}
+
+sealed class Option<T> {}
+
+class Some<T> implements Option<T> {
+  final T value;
+  const Some(this.value);
+  @override
+  String toString() => 'Some($value)';
+}
+
+class None<T> implements Option<T> {
+  @override
+  String toString() => 'None';
+}
+
+Option<U> mapOption<T, U>(Option<T> o, U Function(T) f) {
+  return switch (o) {
+    Some(value: T v) => Some(f(v)),
+    None() => None(),
   };
 }
