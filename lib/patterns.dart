@@ -53,3 +53,24 @@ String colorRgbToString(ColorRgb color) {
       throw NonPrimaryColorError,
   };
 }
+
+
+typedef Point3D = ({double x, double y, double z});
+
+String describePointLocation(Point3D point){
+  return switch(point){
+    (x: 0, y: 0, z: 0) => "origin",
+    
+    (x: _, y: 0, z: 0) => "x axis",
+    (x: 0, y: _, z: 0) => "y axis",
+    (x: 0, y: 0, z: _) => "z axis",
+
+    (x: 0, y: _, z: _) => "x plane",
+    (x: _, y: 0, z: _) => "y plane",
+    (x: _, y: _, z: 0) => "z plane",
+
+    (x: double x, y: double y, z: double z) when x < 1 && y < 1 && z < 1  => "within unit sphere",
+
+    _ => "somewhere in 3 dimensional space"
+  };
+}
