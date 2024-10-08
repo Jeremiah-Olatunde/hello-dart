@@ -98,3 +98,8 @@ Option<U> mapOption<T, U>(Option<T> o, U Function(T) f) {
     None() => None(),
   };
 }
+
+Option<T> fiftyFifty<T>(T value){
+  return Random().nextBool() ? Some(value) : None();
+}
+
