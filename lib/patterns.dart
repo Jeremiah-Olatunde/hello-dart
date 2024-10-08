@@ -103,3 +103,9 @@ Option<T> fiftyFifty<T>(T value){
   return Random().nextBool() ? Some(value) : None();
 }
 
+Option<int> safeDiv(int dividend, int divisor){
+  return switch(divisor){
+    0 => None(),
+    _ => Some(dividend ~/ divisor),
+  };
+}
