@@ -19,3 +19,12 @@ T headV2<T>(List<T> xs) {
   var (T t, U u) = pair;
   return (u, t);
 }
+
+List<String> toGreetings(Map<String, int> person){
+  List<String> greetings = [];
+  for(var MapEntry(key: name, :value) in person.entries){
+    greetings.add('hey I am $name. I am $value.');
+  }
+
+  return greetings;
+}
