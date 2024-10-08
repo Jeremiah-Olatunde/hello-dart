@@ -28,3 +28,8 @@ List<String> toGreetings(Map<String, int> person){
 
   return greetings;
 }
+
+String joinPair(({ String name, int age }) pair, [String? join]){
+  var (:name, :age) = pair;
+  return '$name${join ?? '->'}$age';
+}
