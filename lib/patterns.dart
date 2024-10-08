@@ -116,3 +116,22 @@ Option<T> safeHead<T>(List<T> xs){
     [T head, ..._] => Some(head),
   };
 }
+
+sealed class Result<T, E> {}
+
+class Ok<T, E> implements Result<T, E> {
+  final T value;
+  const Ok(this.value);
+}
+
+class Err<T, E> implements Result<T, E> {
+  final E error;
+  const Err(this.error);
+}
+
+Result<U, E> resultMap<T, U, E>(Result<T, E> r, U Function(T) f){
+  return switch(r){
+    Ok(value: T v) => Ok(f(v)),
+    Err(error: E e) => Err(e),
+  };
+}
