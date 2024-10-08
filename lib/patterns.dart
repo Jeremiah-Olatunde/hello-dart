@@ -135,3 +135,10 @@ Result<U, E> resultMap<T, U, E>(Result<T, E> r, U Function(T) f){
     Err(error: E e) => Err(e),
   };
 }
+
+U resultMapOr<T, E, U>(Result<T, E> r, U fallback, U Function(T) f){
+  return switch(r){
+    Ok(value: T v) => f(v),
+    Err(error: E _) => fallback,
+  };
+}
